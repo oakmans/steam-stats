@@ -1,0 +1,27 @@
+{
+  "name": "stats-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "morgan": "~1.9.1",
+    "passport": "^0.4.1",
+    "passport-steam": "^1.0.14"
+  },
+  "devDependencies": {
+    "express-session": "^1.17.1",
+    "nodemon": "^2.0.4"
+  }
+}

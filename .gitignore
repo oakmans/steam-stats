@@ -1,0 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/stats-frontend/node_modules
+/stats-backend/node_modules
+/stats-backend/bin
+/stats-backend/src/keys.js
+/stats-frontend/src/keys.js
+/stats-frontend/.pnp
+/stats-frontend/.pnp.js
+
+# testing
+/stats-frontend/coverage
+
+# production
+/stats-frontend/build
+
+# misc
+/stats-frontend/.DS_Store
+/stats-frontend/.env.local
+/stats-frontend/.env.development.local
+/stats-frontend/.env.test.local
+/stats-frontend/.env.production.local
+
+/stats-frontend/npm-debug.log*
+/stats-frontend/yarn-debug.log*
+/stats-frontend/yarn-error.log*
+
+/.idea
