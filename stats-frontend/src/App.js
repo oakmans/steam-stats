@@ -14,6 +14,7 @@ class App extends React.Component{
                 pic: ''
             },
             loggedIn: false,
+            brand: this.getDefaultBrand(),
             button: this.getButton(false),
             show: false,
             bodyText: ''
@@ -38,6 +39,7 @@ class App extends React.Component{
                 pic: ''
             },
             loggedIn: false,
+            brand: this.getDefaultBrand(),
             button: this.getButton(false),
             show: true,
             bodyText: 'Successfully Logged Out!'
@@ -56,9 +58,9 @@ class App extends React.Component{
                         id: id, name: name, pic: pic
                     },
                     loggedIn: true,
+                    brand: this.getUserBrand(name, pic),
                     button: this.getButton(true)
                 })
-                console.log(this.state.user)
             }
         })
     }
@@ -68,6 +70,29 @@ class App extends React.Component{
             show: false,
             bodyText: ''
         })
+    }
+
+    getDefaultBrand() {
+        return (
+            <Navbar.Brand>
+                Steam Stats
+            </Navbar.Brand>
+        )
+    }
+
+    getUserBrand(name, pic) {
+        return (
+            <Navbar.Brand>
+                <img
+                    alt="Avatar"
+                    title={name}
+                    src={pic.substring(0, pic.length-9)+'.jpg'}
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                />{' '}
+            </Navbar.Brand>
+        )
     }
 
     getButton(loggedIn) {
@@ -93,7 +118,7 @@ class App extends React.Component{
                 <Row>
                     <Col>
                         <Navbar bg="dark" variant="dark">
-                            <Navbar.Brand>Steam Stats</Navbar.Brand>
+                            {this.state.brand}
                             <Navbar.Collapse className="justify-content-start">
                                 <Nav.Link style = {{color: 'orange', textDecoration: 'none'}}>Stats</Nav.Link>
                                 <Nav.Link style = {{color: 'orange', textDecoration: 'none'}}>News</Nav.Link>

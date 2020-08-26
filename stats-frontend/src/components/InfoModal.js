@@ -2,11 +2,6 @@ import React from 'react'
 import { Modal, Button } from "react-bootstrap";
 
 export class InfoModal extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-
 
     render() {
         return (
